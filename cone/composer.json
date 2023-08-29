@@ -1,0 +1,22 @@
+{
+    "name": "erjon/cone",
+    "autoload": {
+        "psr-4": {
+            "Erjon\\Cone\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Erjon Stafa",
+            "email": "erjonstafa647@gmail.com"
+        }
+    ],
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Erjon\\Cone\\ConeServiceProvider"
+            ]
+        }
+    }
+}
