@@ -12,9 +12,7 @@
             "email": "erjonstafa647@gmail.com"
         }
     ],
-    "require": {
-        "php": "^7.3"
-    },
+    "require": {},
     "minimum-stability": "dev",
     "prefer-stable": true,
     "extra": {
