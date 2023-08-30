@@ -7,11 +7,15 @@
     },
     "authors": [
         {
-            "name": "Erjon Stafa",
+            "name": "erjonstafa",
             "email": "erjonstafa647@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "php": "^7.3"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "extra": {
         "laravel": {
             "providers": [
