@@ -3,7 +3,8 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Erjon\\Cone\\": "src/"
+            "Erjon\\Cone\\": "src/",
+            "Erjon\\Cone\\App\\": "src/app/"
         }
     },
     "authors": [
