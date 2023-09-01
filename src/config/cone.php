@@ -1,7 +1,8 @@
 <?php
 
 return [
-    'connection' => env('CONE_DB_CONNECTION', 'mysql'),
+    'token' => env('CONE_TOKEN', ''),
+    'api_url' => '',
     'route-after-license' => 'login',
     'route-to-logout' => 'logout'
 ];

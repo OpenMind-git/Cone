@@ -3,18 +3,13 @@
 namespace Erjon\Cone\App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Key;
 use Erjon\Cone\App\Http\Requests\ActivateLicenseRequest;
-use Erjon\Cone\App\Services\KeyService;
+use Erjon\Cone\Cone;
 use \Exception;
 
 class LicenseController extends Controller
 {
-    private $keyService;
-
-    public function __construct(KeyService $keyService)
-    {
-        $this->keyService = $keyService;
-    }
 
     public function showLicenseForm()
     {
@@ -24,7 +19,7 @@ class LicenseController extends Controller
     public function activateLicense(ActivateLicenseRequest $request)
     {
         try {
-            if ($this->keyService->activate($request->validated())) {
+            if ((new Cone)->activateLicense(\Auth::user()->email, $request->validated()['key'])) {
                 return redirect()->route(config('cone.route-after-license'));
             }
 
